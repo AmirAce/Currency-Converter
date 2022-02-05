@@ -11,7 +11,7 @@ public class Main {
 			
 	}
 	public static int toDollars(int toman) {
-		int Dollars = toman/3000;
+		int Dollars = toman/30000;
 		return Dollars;
 	}
 
