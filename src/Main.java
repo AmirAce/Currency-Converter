@@ -11,18 +11,34 @@ public class Main {
 			Scanner scan = new Scanner(System.in);
 			int optscan = scan.nextInt();
 			switch(optscan) {
-			case 1: toDollars();
+			case 1: fromCurrency();
 			}
 		
 			
 	}
 	public static int toDollars() {
-		System.out.println("Enter your Currency");
+		System.out.println("Enter amount to convert");
 		Scanner scan = new Scanner(System.in);
 		int toman = scan.nextInt();
 		int Dollars = toman/30000;
 		System.out.println(Dollars);
 		return Dollars;
+	}
+	public static void fromCurrency() {
+		System.out.println("What is your currency?");
+		Scanner scan = new Scanner(System.in);
+		String currency = scan.nextLine();
+		switch(currency) {
+		case "toman":toCurrency(currency);
+		}
+	}
+	public static  void toCurrency(String currency) {
+		System.out.println("what would you like to convert " + currency + " " + "to?");
+		Scanner scan = new Scanner(System.in);
+		currency = scan.next();
+		switch(currency) {
+			case "dollars":toDollars();
+		}
 	}
 
 }
